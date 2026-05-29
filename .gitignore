@@ -1,0 +1,17 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# LaTeX
+tex/*.aux
+tex/*.fdb_latexmk
+tex/*.fls
+tex/*.log
+tex/*.synctex.gz
+tex/*.toc
+tex/*.bbl
+tex/*.blg
+tex/*.out
+tex/*.pdf
+.python-version
