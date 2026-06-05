@@ -23,7 +23,8 @@ all: $(TEX_DIR)/main.pdf
 FIGURES := #insert here plots lol
 
 
-$(TEX_DIR)/main.pdf: $(TEX_DIR)/main.tex $(TEX_DIR)/references.bib #$(TEX_DIR)/chapters/*.tex $(FIGURES)
+
+$(TEX_DIR)/main.tex $(TEX_DIR)/references.bib: #$(TEX_DIR)/chapters/*.tex $(FIGURES)
 	cd $(TEX_DIR) && latexmk -pdf -interaction=nonstopmode main.tex
 
 setup:
@@ -34,6 +35,11 @@ clean:
 
 moreclean:
 	cd $(TEX_DIR) && latexmk -C
+<<<<<<< HEAD
 	rm $(FIG_DIR)/*.pdf
 	rm $(DATA_PROC)/*.txt
 	rm $(DATA_PROC)/*.csv
+=======
+	rm -rf $(FIG_DIR)/*.pdf
+	rm -rf $(DATA_PROC)/*
+>>>>>>> d80c3a9a672d7bffd1ebfaa127255d333cd38290
